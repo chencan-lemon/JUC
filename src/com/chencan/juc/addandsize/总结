@@ -1,0 +1,90 @@
+题目描述：
+实现一个容器，提供两个方法add、size，
+写两个线程，线程1，添加10个元素到容器中线程2，实时监控元素个数，当个数到5个时，线程2给出提示并结束
+
+1.WithoutVolatile
+/**
+ * 没有按预期执行的原因
+ * 1.没有加同步
+ * 2.while(true)中的c.size()方法永远没有检测到，原因是线程与线程之间是不可见的
+*/
+
+2.WithVolatile
+/**
+ * 注释掉t1线程里的TimeUnit.SECONDS.sleep(1);程序还是无法运行成功
+ * volatile修饰List集合，虽然实现了线程间信息的传递，但还是与不足之处，
+ * volatile一定要尽量去修饰普通的值，不要去修饰引用值，
+ * 因为volatile修饰引用类型，这个引用对象指向的是另外一个new出来的对象，
+ * 如果这个对象里边的成员变量的值改变了，是无法观察到的，所以小程序2也不理想
+*/
+
+3.NotifyHoldingLock
+/**
+ * 没有按预期执行的原因
+ * notify()方法不释放锁
+*/
+
+4.NotifyFreeLock
+/**
+ * 按预期执行的原因
+ * notify()之后，t1必须释放锁(调用了wait()方法阻塞了t1线程)，
+ * 实现了t2线程的实时监控，t2线程执行结束，打印出相应提示，
+ * 最后调用notify()方法唤醒t1线程，让t1线程完成执行
+*/
+
+5.CountDownLatch
+/**
+ *没有按预期执行的原因
+ * 在t1线程里，对象增加到5个时，t2线程的门拴确实被打开了，但是t1线程马上又会接着执行，
+ * 之前是t1会休眠1秒，给t2线程执行时间，但当注释掉休眠1秒这段代码，t2就没有机会去实时
+ * 监控了
+*/
+
+6.CountDownLatch_WithoutSleep
+/**
+ *按预期执行的原因
+ * 在t1线程打开t2线程门拴的时候，让t1线程再给自己添加一个门拴
+*/
+
+/**
+ * 使用Latch（门闩）替代wait notify来进行通知
+ * 好处是通信方式简单，同时也可以指定等待时间
+ * 使用await和countdown方法替代wait和notify
+ * CountDownLatch不涉及锁定，
+ * 当count的值为零时当前线程继续运行
+ * 当不涉及同步，只是涉及线程通信的时候，用synchronized + wait/notify就显得太重了
+ * 这时应该考虑countdownlatch/cyclicbarrier/semaphore
+*/
+
+7.LockSupport
+/**
+ *注释掉t1线程里的TimeUnit.SECONDS.sleep(1);程序还是无法运行成功
+ * 在t1线程调用unpark()方法唤醒t2线程的时候，t1线程并没有停止，
+ * 造成t2线程无法及时的打印提示信息
+*/
+
+8.LockSupport_WithoutSleep
+/**
+ * 按预期执行的原因
+ * t1线程调用unpark()方法唤醒t2线程的时候，紧接着调用park()方法使t1线程阻塞，
+ * 实现了t2线程的实时监控，t2线程执行结束，打印出相应提示，
+ * 最后调用unpark()方法唤醒t1线程，让t1线程完成执行
+*/
+
+9.Semaphore
+/**
+ * 按预期执行的原因
+ * 创建一个Semaphore对象，设置只能有1一个线程可以运行，
+ * t1线程开始启动，调用acquire()方法限制其它线程运行，在for循环
+ * 添加了5个对象以后，调用s.release()表示其它线程可以运行，这个时候
+ * t1线程启动t2线程，调用join()把CPU的控制权交给t2线程，t2线程打印出相应提示，t2线程执行结束
+ * t1线程调用acquire()方法重新获得执行权，继续输出后来的对象添加信息
+*/
+
+小结
+9个程序，5种技术分别是volatile、wait()和notify()、Semaphore、CountDownLatch、LockSupport,
+建议牢牢掌握wait()和notify()这个方案，其它的用作巩固技术
+
+
+
+

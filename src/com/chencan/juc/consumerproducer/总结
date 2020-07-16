@@ -1,0 +1,9 @@
+题目描述： 写一个固定容量同步容器，拥有put和get方法，以及getCount方法，
+ 能够支持2个生产者线程以及10个消费者线程的阻塞调用
+
+ 1.经典的生产者-消费者问题
+
+ 2. 实现方法   ReentrantLock  2个Condition
+       private Lock lock = new ReentrantLock();
+       private Condition producer = lock.newCondition();
+       private Condition consumer = lock.newCondition();

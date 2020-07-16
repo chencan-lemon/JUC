@@ -1,0 +1,6 @@
+题目描述：两个线程，第一个线程是从1到26，第2个线程是从A一直到Z，
+然后要让这2个线程做到同时运行，交替输出，顺序打印。
+
+1.LockSupport是最简单的
+2.掌握LockSupport 和 sync_wait_notify写法
+3.能用2个condition实现也好
