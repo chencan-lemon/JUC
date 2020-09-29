@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0da6bb37-2086-492d-bd48-b7427506bd0f" name="Default Changelist" comment="" />
+    <list default="true" id="0da6bb37-2086-492d-bd48-b7427506bd0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/chencan/blockingqueue/S01_ArrayBlockingQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\workspace\juc\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1elBVo3HP7vcEenMC4Li0Nc6eA3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -21,13 +40,36 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\juc\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="S01_ArrayBlockingQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chencan.blockingqueue.S01_ArrayBlockingQueue" />
+      <module name="juc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chencan.blockingqueue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.S01_ArrayBlockingQueue" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -51,14 +93,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594886325837</updated>
-      <workItem from="1594886328561" duration="128000" />
+      <workItem from="1594886328561" duration="398000" />
+      <workItem from="1601378153848" duration="3139000" />
     </task>
+    <task id="LOCAL-00001" summary="生产者和消费者模式&#10;线程同步">
+      <created>1594886644662</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594886644662</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="生产者和消费者模式&#10;线程同步" />
+    <option name="LAST_COMMIT_MESSAGE" value="生产者和消费者模式&#10;线程同步" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="845" y="154" key="#com.intellij.ide.util.MemberChooser" timestamp="1601378771882">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="845" y="154" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601378771882" />
+    <state x="385" y="11" key="CommitChangelistDialog2" timestamp="1594886640382">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="385" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1594886640382" />
     <state x="643" y="308" width="273" height="280" key="Github.ShareDialog" timestamp="1594886480529">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -67,9 +130,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="785" y="172" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594886495347" />
-    <state x="493" y="109" key="SettingsEditor" timestamp="1594886455664">
+    <state width="1014" height="162" key="GridCell.Tab.0.bottom" timestamp="1601379901653">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="493" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594886455664" />
+    <state width="1014" height="162" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601379901653" />
+    <state width="1014" height="162" key="GridCell.Tab.0.center" timestamp="1601379901653">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="162" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601379901653" />
+    <state width="1014" height="162" key="GridCell.Tab.0.left" timestamp="1601379901653">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="162" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601379901653" />
+    <state width="1014" height="162" key="GridCell.Tab.0.right" timestamp="1601379901653">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1014" height="162" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601379901653" />
+    <state x="493" y="0" key="SettingsEditor" timestamp="1601379632623">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="493" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601379632623" />
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1594886649408">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1594886649408" />
   </component>
 </project>
